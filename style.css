@@ -1,0 +1,71 @@
+html {	font-size: 100%;
+	height: 100%;
+}
+
+body {	background: #fff; color: #2f2c2c;
+	overflow: auto; overflow-y: scroll;
+	font: 12px/18px Ubuntu, Arial, Helvetica, sans-serif;
+	margin: auto; min-height: 100%;
+}
+
+a, a:link {
+	color: blue; text-decoration: underline;
+}
+a:visited {
+	color: purple;
+}
+a:hover, a:focus {
+}
+a:active {
+	color: red;
+}
+
+header {
+	background-color: #656262; color: #fff;
+		background-image: -moz-linear-gradient(#7a7676, #4f4c4c);
+		background-image: -webkit-linear-gradient(#7a7676, #4f4c4c);
+		background-image: -ms-linear-gradient(#7a7676, #4f4c4c);
+		background-image: -o-linear-gradient(#7a7676, #4f4c4c);
+	background-image: linear-gradient(#7a7676, #4f4c4c);
+	box-shadow: 0 0 9px #4f4c4c;
+	
+	margin: 0; padding: 9px 18px;
+}
+
+header h1 {
+	color: #fff; text-shadow: 0 0 2px black;
+	font: bold 24px/36px Ubuntu, Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+header a, header a:link, header a:visited,
+header a:hover, header a:focus, header a:active {
+	color: white;
+	text-decoration: none;
+}
+header a:hover, header a:focus, header a:active {
+	text-decoration: underline;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0; padding: 9px 18px;
+}
+
+nav ul li {
+	display: inline-block; margin: 0; padding: 0;
+}
+
+nav a {
+	display: inline-block; margin: 0; padding: 0 18px 0 0;
+}
+
+nav a, nav a:link, nav a:visited, nav a:hover, nav a:focus, nav a:active {
+	color: #4f4c4c; text-decoration: none;
+}
+
+nav a:hover, nav a:focus, nav a:active { text-decoration: underline; }
+
+article {
+	padding: 9px 18px;
+}
