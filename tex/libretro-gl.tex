@@ -30,6 +30,8 @@ Using libretro API, platform specifics like managing windows, rendering surfaces
 \section*{Using OpenGL in libretro}
 
 \begin{itemize}
+\item Use \texttt{RETRO\_ENVIRONMENT\_SET\_PIXEL\_FORMAT} and request a 32-bit format. This is the format that the resulting framebuffer will have~\footnote{In reality, RetroArch converts all 16-bit data (\texttt{RETRO\_PIXEL\_FORMAT\_RGB565}) to 32-bit (\texttt{XRGB8888}) when running desktop GL for performance reasons. In GLES mode, this is not done, however. Do not rely on this behavior, and be explicit about it.}.
+
 \item Use \texttt{RETRO\_ENVIRONMENT\_SET\_HW\_RENDER} environment callback in \\\texttt{retro\_load\_game()}, notifying frontend that core is using hardware rendering. An OpenGL 2+ or GLES2 context can be specified here. If this is not supported the callback will return false, and you can fallback to software rendering or refuse to start.
 
 \item In \texttt{retro\_get\_system\_av\_info()}, as normal, \texttt{max\_width} and \\\texttt{max\_height} fields specify the maximum resolution the core will render to.
@@ -60,13 +62,13 @@ There is no need to disable this before calling \\\texttt{retro\_video\_refresh\
 \item Avoid VAOs. They tend to break on less-than-stellar drivers~\footnote{At least AMD drivers on Windows are known to break here.}.
 
 \item Try to write code which is GLES2 as well as GL2+ (w/ extensions) compliant. This ensures maximum target surface for the libretro core.
-\end{itemize} 
+\end{itemize}
 
 \section*{Test implementations}
 A very basic test implementation of libretro GL interface is available in RetroArch repository on GitHub~\footnote{https://github.com/Themaister/RetroArch/tree/master/libretro-test-gl}.
 It displays two spinning quads. It runs both as a GLES2 and GL2 core depending on \texttt{GLES} environment variable.
 
-A slightly more involved test core is found on Bitbucket~\footnote{https://bitbucket.org/Themaister/libretro-gl}. It uses instanced rendering of a textured cube, with FPS-style fly-by camera. It uses libretro's mouse API. It is also valid GLES and GL2 at the same time.
+A slightly more involved test core is found on Bitbucket~\footnote{https://bitbucket.org/Themaister/libretro-gl}. It uses instanced rendering of a textured cube, with FPS-style fly-by camera. It uses libretro's mouse API as well. It is valid GLES and GL2 at the same time.
 
 \section*{Building a libretro core}
 Libretro is an interface, and not a utility library. Libretro cores are built as standalone dynamic or static libraries, and as they use GL symbols here, they must link against GL symbols themselves.
