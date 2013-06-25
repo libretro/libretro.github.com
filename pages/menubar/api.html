@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	<meta charset="UTF-8" />
+	<title>RetroArch - multi-system frontend for libretro</title>
+	
+	<link rel="stylesheet" href="../../style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body>
+   <header><h1><a href="../../index.html"><img src="http://i.imgur.com/xlGNy.png"  width="300" height="60"/></a></a></h1>
+   <h2><a href="api.html">One API</a> | <a href="ecosystem.html">One Ecosystem</a> | <a href="mission.html">One Mission</a> | <a href="approach.html">One Approach</a> | <a href="multiple-platforms.html">Multiple Platforms</a> | <a href="multiple-frontends.html">Multiple Frontends</a></h2>
+	</header>
+	<nav><ul>
+			<li><a href="https://libretro.wordpress.com/">Blog</a></li>
+			<li><a href="https://imgur.com/a/6u8Zb#0">Screenshots</a></li>
+			<li><a href="http://forum.themaister.net/">Forum</a></li>
+			<li><a href="https://twitter.com/#!/libretro">Twitter</a></li>
+			<li><a href="https://plus.google.com/113720778779817973665/posts/MuN3co7BzUr">Google+</a></li>
+			<li><a href="https://www.facebook.com/libretro.retroarch">Facebook</a></li>
+			<li><a href="https://www.youtube.com/libretro">Youtube</a></li>
+			<li><a href="https://github.com/libretro/libretro.github.com/wiki/Supported-cores">Supported Cores</a></li>
+			<li><a href="https://github.com/libretro/libretro.github.com/wiki/Documentation-devs">Documentation</a></li>
+			<li><a href="https://github.com/Themaister/RetroArch">Source code/repository</a></li>
+	</ul></nav>
+   <a href="../platforms/windows.html"><img src="../../pics/windows-icon.png" /></a>
+   <a href="../platforms/linux.html"><img src="../../pics/linux-icon.png" /></a>
+   <a href="../platforms/apple.html"><img src="../../pics/apple-icon.png" /></a>
+   <a href="../platforms/android.html"><img src="../../pics/android-icon.png" /></a>
+   <a href="../platforms/ios.html"><img src="../../pics/ios-icon.png" /></a>
+   <a href="../platforms/blackberry.html"><img src="../../pics/blackberry-icon.png" /></a>
+   <a href="../platforms/pandora.html"><img src="../../pics/pandora-icon.png" /></a>
+   <a href="../platforms/ps3.html"><img src="../../pics/ps3-icon.png" /></a>
+   <a href="../platforms/360.html"><img src="../../pics/360-icon.png" /></a>
+   <a href="../platforms/wii.html"><img src="../../pics/wii-icon.png" /></a>
+   <a href="../platforms/xbox1.html"><img src="../../pics/xbox-icon.png" /></a>
+   <a href="../platforms/gamecube.html"><img src="../../pics/gamecube-icon.png" /></a>
+	<article>
+      <h1>What is libretro?</h1>
+      <p>Libretro is a simple API that allows for the creation of games and emulators. Like most great ideas, it is very simple in nature, yet very powerful. Like the greatest ideas, the simplicity of it all requires some explanation in order to truly grasp how useful it can be to your own projects.</p>
+      <p>When you choose to use the libretro API, your program gets turned into a single library file (called a 'libretro core'). A frontend that supports the libretro API can then load that library file and run the app. The frontend's responsibility is to provide all the implementation-specific details, such as video/audio/input drivers. The libretro core's responsibility is solely to provide the main program. You therefore don't have to worry about writing different video drivers for Direct3D, OpenGL or worrying about catering to all possible input APIs/sound APIs/supporting all known joypads/etc. This is none of your concern on the libretro core implementation level.</p>
+      <p>Any project that is ported to work with this API can be made to run on ANY libretro frontend - now and forever. This is portability and abstraction done right - you maintain a single codebase that only deals with the main program, and you then target one single API (libretro) in order to port your program over to multiple platforms at once.</p>
+      <p>Other projects benefit from our ever-expanding libretro core software library by implementing the libretro API inside their own projects. To this end, project such as XBMC have already begun writing a libretro driver based on the RetroArch reference libretro frontend.</p>
+      <p>RetroArch is the official reference frontend, and it is available on nearly all modern-day platforms. It is meant to be fast, simple, yet powerful.</p>
+      <p>Other platform-specific frontends are currently in development, including native integration with the popular HTPC platform XBMC.</p>
+      <h1>Who Uses Libretro?</h1>
+      <p>While the most common use case for libretro has been console emulation, it is equally suited as a platform for almost any 2D game. For example, the NX Engine used in the popular freeware game Cave Story has been successfully ported to libretro, open sourced games like Quake and Doom have been ported to libretro, and the new freeware game Dinothawr supports libretro natively.</p>
+      <p>But wait, there's more...</p>
+      <h1>Libretro GL</h1>
+      <p>Aside from retro-style games and emulators that depend on software rendering and where you'd typically need nothing more than the ability to render to a framebuffer, the Libretro API also allows you to target OpenGL. This subset of GL functionality (that we call libretro GL) allows you to create libretro ports that use OpenGL as part of their internal rendering. There are two subsets that can be targeted - either OpenGL 2.0 or OpenGL ES 2.0.</p>
+      <p>From a portability perspective, we highly recommend that you try to target both so that your libretro GL port will work on both mobile and desktop computers.</p>
+      <h1>Why Should Developers Target Libretro?</h1>
+      <p>Software that targets the libretro API instantly gains access to all of the platforms that have libretro frontends available. That means your game is immediately available to those platforms’ users without worrying about input/audio/video drivers, compatibility issues or the myriad quirks of the underlying host system(s). Likewise, there’s no need to write specialized GUI code for each platform or to use esoteric–and often buggy–cross-platform toolkits, like Qt and GTK+.</p>
+      <p>Furthermore, once your game supports libretro, all of the libretro frontends’ other features come along for free, such as RetroArch’s real-time rewind, lag-concealing netplay, lossless video recording/streaming and cutting-edge post-processing shader support.</p>
+      <p>Perhaps best of all: libretro is an open specification that is 100% free to implement, with no licensing fees or hidden strings attached.</p>
+      <p>If you’d like to learn more about libretro, leave us a comment or chat with us on IRC at #retroarch on Freenode.</p>
+	</article>
+</body>
+</html>
