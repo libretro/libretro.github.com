@@ -766,19 +766,6 @@ After version 0.72, MAMEdev removed various speedhacks for games using Midway
  These speedhacks have been re-integrated into the MAME 0.78 codebase, and
  they are of great benefit to the runtime performance of games like Mortal
  Kombat 1/2/3/Ultimate, NBA Jam and other Midway games using this hardware.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -818,7 +805,7 @@ This is a multi-system arcade emulator based on a late 2010 version of MAME
  (to be specific, it's version 0.139).
  This makes it competitive with MAME4Droid Reloaded which also targets this
  codebase.
- This halfway house between MAME 2010 and MAME 2014 is mainly intended for
+ This halfway house between MAME 2003 and MAME 2014 is mainly intended for
  more powerful mobile platforms that were released during 2012 to 2013.
  While far slower than MAME 2003, it is still measurably faster than MAME
  2014.
@@ -827,8 +814,8 @@ This is a multi-system arcade emulator based on a late 2010 version of MAME
 \begin_layout Standard
 Compared to MAME 2003, MAME 2010 has a lot more content available.
  For instance, Namco System 11/12 games can be played with full sound, Capcom
- CPS3 support was added, Killer Instinct 1/2 are fully playable, DRC support
- for 64bit got added, and more.
+ CPS3 support was added, Killer Instinct 1/2 are fully playable, Dynamic
+ recompilation support for 64bit got added, and more.
 \end_layout
 
 \begin_layout Subsection
@@ -843,19 +830,6 @@ Cave SH3 re-addition
 The Cave SH3 drivers were removed at a specific point in time due to a legal
  dispute between Cave and MAMEdev.
  This driver has been readded to MAME 2010.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newpage
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -910,6 +884,21 @@ The Cave SH3 drivers were removed at a specific point in time due to a legal
  dispute between Cave and MAMEdev.
  This driver has been readded to MAME 2014.
  It will probably be readded soon to MAME mainline as well.
+\end_layout
+
+\begin_layout Subsection
+Notes
+\end_layout
+
+\begin_layout Itemize
+You can bring up MAME's OSD GUI by pressing the R2 button on the RetroPad.
+\end_layout
+
+\begin_layout Itemize
+MAME 2014 supports the RetroKeyboard as an input device as well.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -923,18 +912,6 @@ newpage
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Notes
-\end_layout
-
-\begin_layout Itemize
-You can bring up MAME's OSD GUI by pressing the R2 button on the RetroPad.
-\end_layout
-
-\begin_layout Itemize
-MAME 2014 supports the RetroKeyboard as an input device as well.
 \end_layout
 
 \begin_layout Section
