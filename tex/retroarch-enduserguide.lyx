@@ -1431,7 +1431,7 @@ Broken framebuffer effects in glN64
 \end_layout
 
 \begin_layout Standard
-This is known about and it will probably be trivial to hook this up.
+This is a known issue and it will probably be trivial to hook this up.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1457,7 +1457,7 @@ Star Wars: Shadows of the Empire sometimes boots, sometimes crashes
 \end_layout
 
 \begin_layout Standard
-This issue is known about, and there is currently no fix for it.
+This is a known issue, and there is currently no fix for it.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1465,7 +1465,7 @@ Pokemon Puzzle League doesn't work
 \end_layout
 
 \begin_layout Standard
-This issue is known about, and there is currently no fix for it.
+This is a known issueand there is currently no fix for it.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1473,7 +1473,7 @@ Blast Corps - Crashes after Rare logo with dynarec on ARM devices
 \end_layout
 
 \begin_layout Standard
-This is known about.
+This is a known issue.
  The very same issue happens with Mupen64 Plus AE too.
  Currently, the only way to play this game on an ARM device would be to
  switch the CPU core to 'Cached interpreter'.
@@ -1486,7 +1486,7 @@ Perfect Dark is very slow in scenes with framebuffer effects or motion blur
 \end_layout
 
 \begin_layout Standard
-This is known about.
+This is a known issue.
  The issue is that the only way to accelerate these scenes would be to use
  Hardware Framebuffer Emulation, and that has drawbacks of its own such
  as vertices with black textures after certain scenes have ran (such as
@@ -1500,7 +1500,7 @@ Conker's BFD - Conker has no shadow
 \end_layout
 
 \begin_layout Standard
-This is known about.
+This is a known issue.
  Shadows depend on a depth texture being rendered, and the only way to render
  these is to use Hardware Framebuffer Emulation.
  While we can enable this mode, it has severe drawbacks in other areas right
@@ -1514,7 +1514,7 @@ PilotWings 64 - There is a very annoying long black vertice obscuring a
 \end_layout
 
 \begin_layout Standard
-This is known about, and it seems to happen with glN64 too and mainline
+This is a known issue, and it seems to happen with glN64 too and mainline
  Mupen64 in general.
  What is supposed to happen there is that a shadow on the ground should
  be in place of these broken vertice spans.
@@ -1530,7 +1530,7 @@ Legend of Zelda: Majora's Mask - subscreen framebuffer image takes about
 \end_layout
 
 \begin_layout Standard
-This is known about, and a fix is not yet known.
+This is a known issue, and a fix is not yet known.
 \end_layout
 
 \begin_layout Standard
