@@ -1278,7 +1278,7 @@ l RSP plugin, such as GoldenEye 007.
 \end_layout
 
 \begin_layout Standard
-The plugin also handles certain graphics functions that the low-level RSP
+The plugin also handles certain graphics functions that the high-level RSP
  is missing.
  For instance, Resident Evil 2 requires that you use the low-level RSP plugin
  in order for all the FMV movies and backgrounds to work.
