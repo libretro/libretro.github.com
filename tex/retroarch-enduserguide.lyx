@@ -610,6 +610,153 @@ newpage
 \end_layout
 
 \begin_layout Section
+bsnes
+\end_layout
+
+\begin_layout Standard
+This is a Super Nintendo emulator based on the open-source emulator bsnes.
+ It is an accuracy-focused emulator and as such can run almost all games
+ for the SNES with cycle accuracy, unlike other SNES emulators.
+ However, this comes at the cost of performance.
+\end_layout
+
+\begin_layout Subsection
+How to run
+\end_layout
+
+\begin_layout Standard
+bSNES does not work on its own, but runs SNES ROM images.
+ These image files need to have the following extensions
+\end_layout
+
+\begin_layout Itemize
+sfc
+\end_layout
+
+\begin_layout Standard
+Select one of these.
+ If the image is verified to be OK, it will start up the game.
+\end_layout
+
+\begin_layout Subsection
+How do all these different versions compare?
+\end_layout
+
+\begin_layout Standard
+There are several versions of bsnes out there.
+\end_layout
+
+\begin_layout Subsubsection
+bsnes Performance v0.92
+\end_layout
+
+\begin_layout Standard
+This is a fairly recent version of bsnes' performance core - the same one
+ used in Higan.
+ Some games - like Mega Man X2 and X3 - are broken with this version even
+ if you have the BIOS files placed in your System directory.
+ Some of the games requiring high accuracy won't run correctly either.
+ To make up for it, it has much better performance than the balanced or
+ accuracy cores.
+\end_layout
+
+\begin_layout Subsubsection
+bsnes Balanced v0.92
+\end_layout
+
+\begin_layout Standard
+This is a fairly recent version of bsnes' performance core - the same one
+ used in Higan.
+ It should play games like Mega Man X2/X3 with no problems.
+ It is much slower than bsnes performance but still a lot faster than bsnes
+ accuracy.
+\end_layout
+
+\begin_layout Subsubsection
+bsnes Accuracy v0.92
+\end_layout
+
+\begin_layout Standard
+This is a fairly recent version of bsnes' accuracy core - the same one used
+ in Higan.
+ This should be capable of playing all SNES games accurately at the cost
+ of performance.
+\end_layout
+
+\begin_layout Subsubsection
+bsnes Performance C++98 v0.85
+\end_layout
+
+\begin_layout Standard
+Later versions of bsnes are written in cutting-edge C++11 and cannot be
+ used on certain outdated compilers.
+ This port of bsnes to C++98 was written for those compilers in mind.
+ It is an older version of bsnes compared to the one in Higan but there
+ should only be minor differences between this and bsnes performance v0.92.
+ 
+\end_layout
+
+\begin_layout Subsection
+Libretro port-specific additions
+\end_layout
+
+\begin_layout Subsubsection
+Cartridge folders not enforced
+\end_layout
+
+\begin_layout Standard
+Cartridge folders are not forced on you, and you are still able to load
+ SFC ROMs without having to go the Purify route.
+\end_layout
+
+\begin_layout Subsubsection
+More pragmatic static syncing
+\end_layout
+
+\begin_layout Standard
+Higan's way of static synchronization is for all intents and purposes like
+ RetroArch's, except ours is superior from an end-user point of view.
+ It does not require of the user that he has to dial a figurative knob for
+ hours on end to get the 'perfect refresh rate' of his monitor as a reference
+ clock for the emulator - instead, it only requires that the app refresh
+ rate you use is close enough to the refresh rate of your screen.
+ From there on, dynamic rate control picks up the slack for whenever audio
+ is running late, and combined with threaded video this allows highly demanding
+ and sync-heavy cores like bsnes to run tolerably even on a very high-latency
+ OS like Android.
+\end_layout
+
+\begin_layout Subsection
+Known issues
+\end_layout
+
+\begin_layout Subsubsection
+Mega Man X2/X3 don't run with bsnes performance core
+\end_layout
+
+\begin_layout Standard
+This is a known issue and it's unlikely byuu is going to fix it for the
+ performance core.
+ You will have to use either Balanced or Accuracy core.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Dinothawr
 \end_layout
 
@@ -933,7 +1080,7 @@ How to run
 \end_layout
 
 \begin_layout Standard
-Mupen64 Plus does not operate by itself, but runs N64 ROM images.
+Mupen64 Plus does not work on its own, but runs N64 ROM images.
  These image files need to have one of the following extensions:
 \end_layout
 
@@ -1356,11 +1503,11 @@ Make sure that a config file called RiceVideoLinux.ini has been placed in
 \end_layout
 
 \begin_layout Subsection
-Known outstanding issues
+Known issues
 \end_layout
 
 \begin_layout Standard
-Consider the Mupen64 core right now an advanced alpha version.
+Consider the Mupen64 core right now at an advanced alpha state.
  Lots of issues are known about and will be looked at.
  The most prominent ones we are aware of are listed below.
 \end_layout
@@ -1798,7 +1945,7 @@ How to run
 \end_layout
 
 \begin_layout Standard
-PCSX ReARMed does not operate by itself, but runs PlayStation1 CD images.
+PCSX ReARMed does not work on its own, but runs PlayStation1 CD images.
  These image files need to have one of the following extensions:
 \end_layout
 
@@ -2291,7 +2438,7 @@ How to run
 \end_layout
 
 \begin_layout Standard
-TyrQuake does not operate by itself, but takes Quake 1 PAK files as input.
+TyrQuake does not work on its own, but runs Quake 1 PAK data archives.
 \end_layout
 
 \begin_layout Standard
